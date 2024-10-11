@@ -1,4 +1,5 @@
 #Task 1: Basic Arithmetic Operations
+
 #Open IDLE and select the Python Shell.
 #Type and execute basic arithmetic operations, like 3 + 4, 5 * 6, and 10 / 2.
 #Observe and note the results displayed in the shell.
@@ -7,11 +8,6 @@ print(3+4)
 print(5*6)
 print(10/2)
 
-#Task3
-
-age = input("Enter your age : ")
-age = int(age)
-print(f"your ate {age} years old.")
 
 #Task 4
 first_name = "Jhon"
