@@ -7,13 +7,6 @@ print(3+4)
 print(5*6)
 print(10/2)
 
-
-
-x=5
-name="Alice"
-print(x)
-print(name)
-
 #Task3
 
 age = input("Enter your age : ")
