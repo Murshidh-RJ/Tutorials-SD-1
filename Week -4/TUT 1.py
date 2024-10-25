@@ -6,7 +6,7 @@ Part 01: Guided Programming Exercises
 Simple Exercise
 
     01.If Statement:
-    
+
     Write an if statement to check if a number is divisible by 5. If it is, print "Divisible by 5".
 '''
 
@@ -131,7 +131,7 @@ character = input("Enter an alphabet letter : ")
 if character.islower():
     print(f"{character} is a Lowercase Letter ")
 elif character.isupper():
-    print(f"{character) is aUpper case letter ")
+    print(f"{character} is a Upper case letter ")
 elif character.isdigit():
     print(f"{character} is a Digit ")
 else:
