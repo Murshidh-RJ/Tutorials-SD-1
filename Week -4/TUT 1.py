@@ -1,3 +1,5 @@
+
+
 '''
 Part 01: Guided Programming Exercises
 '''
@@ -136,7 +138,29 @@ elif character.isdigit():
     print(f"{character} is a Digit ")
 else:
     print("its a special character ")
-    
+
+
+
+
+
+'''
+    08. Nested If-Else Statement:
+    Implement a nested if-else structure to calculate different types of discounts based on purchase amount: above 1000, 10% discount; between 500 and 1000, 5% discount; below 500, no discount.
+
+'''
+
+purchase_amount = int(input("Enter the amount you purshased for to obtain discount : "))
+discount_for_1000= purchase_amount*(10/100)
+discount_for_500_to_1000= purchase_amount*(5/100)
+
+if purchase_amount >= 1000 :
+    print(f"your discount is {discount_for_1000}, Final price is {purchase_amount-discount_for_1000}")
+else:
+    if purchase_amount >= 500:
+        print(f"your discount is {discount_for_500_to_1000}, Final price is {purchase_amount-discount_for_500_to_1000}")
+
+    else:
+        print("For below 500 you don't get any discount buy more to save more")
 
 
 
