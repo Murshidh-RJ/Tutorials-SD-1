@@ -162,8 +162,67 @@ else:
     else:
         print("For below 500 you don't get any discount buy more to save more")
 
+'''
+Part 02: Unguided Programming Exercises [TO BE COMPLETED AND SUBMITTED TO BB]
+Hard Exercise
+'''
 
+'''
+    Tax Calculator Based on Gross Income
+    
+    Scenario: In this simplified tax system, the income tax rates are as follows:
+    No tax for income up to £12,500.
+    20% tax for income between £12,500 and £50,000.
+    40% tax for income between £50,000 and £150,000.
+    45% tax for income above £150,000.
+    Objective: Write a Python program to calculate the tax owed based on the gross income input by the user. Then, calculate and display the net income after tax deductions.
 
+    Guidelines:
+    Use selection statements (if-elif-else) to determine the tax bracket based on the user's gross income.
+    Calculate the tax owed for each bracket appropriately.
+    Subtract the tax from the gross income to find the net income.
+    Print the tax owed and the net income.
+    
+    Sample Input/Output:
+    If the user inputs a gross income of £60,000, the program should calculate the tax owed (£7,500 for the first £37,500 over £12,500 and £4,000 for the next £10,000) and display the net income (£48,500).
+'''
+
+# Input the gross income
+gross_income = float(input("Enter your gross income (£): "))
+
+# Initialize tax owed
+tax_owed = 0
+
+# Tax thresholds
+tax_free_limit = 12500
+basic_rate_limit = 50000
+higher_rate_limit = 150000
+
+# Calculate tax based on gross income
+if gross_income <= tax_free_limit:
+    tax_owed = 0  # No tax for income up to £12,500
+elif gross_income <= basic_rate_limit:
+    tax_owed = (gross_income - tax_free_limit) * 0.20  # 20% for income between £12,500 and £50,000
+elif gross_income <= higher_rate_limit:
+    # 20% tax for the first £37,500 (from £12,500 to £50,000)
+    tax_owed = (basic_rate_limit - tax_free_limit) * 0.20
+    # 40% tax for the remaining amount above £50,000
+    tax_owed += (gross_income - basic_rate_limit) * 0.40
+else:
+    # 20% tax for the first £37,500 (from £12,500 to £50,000)
+    tax_owed = (basic_rate_limit - tax_free_limit) * 0.20
+    # 40% tax for the next £100,000 (from £50,000 to £150,000)
+    tax_owed += (higher_rate_limit - basic_rate_limit) * 0.40
+    # 45% tax for the remaining amount above £150,000
+    tax_owed += (gross_income - higher_rate_limit) * 0.45
+
+# Calculate net income after tax
+net_income = gross_income - tax_owed
+
+# Output the results
+print(f"Gross Income: £{gross_income}")
+print(f"Tax Owed: £{tax_owed}")
+print(f"Net Income: £{net_income}")
 
 
 
